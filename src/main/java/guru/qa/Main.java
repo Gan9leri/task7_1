@@ -2,22 +2,22 @@ package guru.qa;
 
 public class Main {
     public static void main(String[] args) {
-       System.out.println("Класс, использующий коллекцию Массив");
+       System.out.println("Класс, использующий массив");
        Fridge haier = new Fridge(true, true, 5);
        System.out.println(haier);
-       System.out.println("Добавление элементов в коллекцию");
+       System.out.println("Добавление элементов в массив");
        haier.putProduct("apple");
        haier.putProduct("melon");
        haier.putProduct("pie");
        haier.putProduct("cake");
        haier.putProduct("watermelon");
        haier.printProducts();
-       System.out.println("Превышение вместимости коллекции");
+       System.out.println("Превышение вместимости массива");
        haier.putProduct("tomato");
-       System.out.println("Поиск элемента в коллекции");
+       System.out.println("Поиск элемента в массиве");
        haier.searchProduct("apple");
        haier.searchProduct("tomato");
-       System.out.println("Удаление элемента из коллекции");
+       System.out.println("Удаление элемента из массива");
        haier.removeProduct("pie");
        haier.printProducts();
 
@@ -71,5 +71,23 @@ public class Main {
        System.out.println("Удаление элемента из коллекции");
        kitchen.removePassport(5);
        kitchen.printPasports();
+
+       System.out.println("\n");
+       System.out.println("Класс, использущий коллекцию Deque");
+       ServingTable table = new ServingTable();
+       System.out.println("Добавление элемента в коллекцию");
+       table.putOrder("Заказ для стола 1");
+       table.putOrder("Заказ для стола 2");
+       table.putOrder("Заказ для стола 3");
+       table.putOrder("Заказ для стола 4");
+       table.putOrder("Заказ для стола 5");
+       table.printOrder();
+       System.out.println("Поиск элемента в коллекции");
+       table.searchOrder("Заказ для стола 3");
+       System.out.println("Получение первого элемента из очереди");
+       table.getOrder();
+       System.out.println("Удаление элемента из коллекции");
+       table.removeOrder("Заказ для стола 3");
+       table.printOrder();
     }
 }
